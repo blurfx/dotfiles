@@ -25,3 +25,4 @@ set backspace=2
 set lazyredraw
 set cul
 set ttyfast
+set mouse=nicr
