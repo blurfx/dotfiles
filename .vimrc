@@ -28,3 +28,5 @@ set lazyredraw
 set cul
 set ttyfast
 set mouse=nicr
+set hlsearch
+set showmatch
