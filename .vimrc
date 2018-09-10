@@ -3,9 +3,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/goyo.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'bling/vim-airline'
+
 
 call plug#end()
 
