@@ -17,7 +17,7 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 set background=dark
-set expandtab ts=2 sw=2 ai
+set expandtab ts=4 sw=4 ai
 set number
 set laststatus=2
 set autoindent
