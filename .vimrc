@@ -8,7 +8,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
 
-
 call plug#end()
 
 colorscheme PaperColor
@@ -18,7 +17,7 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 set background=dark
-set expandtab ts=4 sw=4 ai
+set expandtab ts=2 sw=2 ai
 set number
 set laststatus=2
 set autoindent
@@ -30,3 +29,7 @@ set ttyfast
 set mouse=nicr
 set hlsearch
 set showmatch
+
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
