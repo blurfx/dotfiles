@@ -7,6 +7,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
