@@ -10,4 +10,5 @@ alias desk='cd ~/Desktop'
 alias g11='g++ -o2 -std=c++11'
 alias g17='g++ -o2 -std=c++17'
 alias adog='git log --all --decorate --oneline --graph'
+alias gsgsd="git stash;git stash drop"
 alias zshconf="vim ~/.zshrc"
