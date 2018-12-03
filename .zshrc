@@ -12,3 +12,15 @@ alias g17='g++ -o2 -std=c++17'
 alias adog='git log --all --decorate --oneline --graph'
 alias gsgsd="git stash;git stash drop"
 alias zshconf="vim ~/.zshrc"
+
+#zplug plugins
+source ~/.zplug/init.zsh
+zplug "supercrabtree/k"
+zplug "jimeh/zsh-peco-history"
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load --verbose
