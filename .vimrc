@@ -18,7 +18,7 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 set background=dark
-set expandtab ts=4 sw=4 ai
+set expandtab ts=2 sts=2 sw=2 ai
 set number
 set laststatus=2
 set autoindent
@@ -34,3 +34,6 @@ set showmatch
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
+
+filetype plugin indent on
+autocmd filetype python set ts=4 sts=4 sw=4 expandtab
