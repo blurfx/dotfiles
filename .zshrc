@@ -1,7 +1,15 @@
-# additional settings for oh-my-zsh
-# do not overwrite this file on your zshrc
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="~/.oh-my-zsh"
+
+plugins=(
+  git
+)
 
 source ~/.bash_profile
+source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="agnoster"
 USER=``
