@@ -11,6 +11,8 @@ plugins=(
 source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
+export LANG=ko_kr.UTF-8
+
 ZSH_THEME="agnoster"
 USER=``
 
@@ -25,6 +27,7 @@ alias zshconf="vim ~/.zshrc"
 source ~/.zplug/init.zsh
 zplug "supercrabtree/k"
 zplug "jimeh/zsh-peco-history"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
