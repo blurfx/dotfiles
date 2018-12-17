@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -16,6 +15,11 @@ colorscheme PaperColor
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 0
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
 set background=dark
 set expandtab ts=2 sts=2 sw=2 ai
@@ -31,9 +35,12 @@ set mouse=nicr
 set hlsearch
 set showmatch
 
+
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
 filetype plugin indent on
 autocmd filetype python set ts=4 sts=4 sw=4 expandtab
+
+map <F2> :Le<CR>
