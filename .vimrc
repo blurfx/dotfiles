@@ -8,6 +8,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
 Plug 'leafgarland/typescript-vim'
 
+
 call plug#end()
 
 colorscheme PaperColor
@@ -35,12 +36,14 @@ set mouse=nicr
 set hlsearch
 set showmatch
 
-
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
+syntax on
+
 filetype plugin indent on
 autocmd filetype python set ts=4 sts=4 sw=4 expandtab
+autocmd BufNewFile *.cc,*.cpp 0r ~/.vim/skel/c++.cc
 
 map <F2> :Le<CR>
