@@ -22,28 +22,38 @@ let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 
-set background=dark
-set expandtab ts=2 sts=2 sw=2 ai
-set number
-set laststatus=2
+syntax on
 set autoindent
-set cindent
+set background=dark
 set backspace=2
-set lazyredraw
+set backspace=indent,eol,start
+set cindent
 set cul
-set ttyfast
-set mouse=nicr
+set display+=lastline
+set encoding=utf-8
+set formatoptions+=o
+set gdefault
 set hlsearch
+set ignorecase
+set laststatus=2
+set lazyredraw
+set mouse=nicr
+set nojoinspaces
+set number
+set ruler
 set showmatch
+set showmode
+set smartcase
+set splitright
+set tabstop=4 shiftwidth=4 expandtab
+set ttyfast
+highlight CursorLine cterm=underline gui=underline
 
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
-syntax on
-
 filetype plugin indent on
-autocmd filetype python set ts=4 sts=4 sw=4 expandtab
-autocmd BufNewFile *.cc,*.cpp 0r ~/.vim/skel/c++.cc
 
 map <F2> :Le<CR>
+nmap <Space> <PageDown>
