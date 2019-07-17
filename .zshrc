@@ -6,6 +6,7 @@ export ZSH="~/.oh-my-zsh"
 
 plugins=(
   git
+  git-flow
 )
 
 source ~/.bash_profile
@@ -27,7 +28,7 @@ alias zshconf="vim ~/.zshrc"
 #zplug plugins
 source ~/.zplug/init.zsh
 zplug "supercrabtree/k"
-zplug "jimeh/zsh-peco-history"
+zplug "jimeh/zsh-peco-history", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
