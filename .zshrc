@@ -78,10 +78,3 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load --verbose
-
-# uncomment below lines if you want to use peco+history without any plugin
-# function naive-peco-history {
-#     history | awk '{ $1=""; print substr($0,2)}' | uniq | peco
-# }
-# zle -N naive-peco-history
-# bindkey '^R' naive-peco-history
