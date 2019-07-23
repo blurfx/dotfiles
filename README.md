@@ -2,7 +2,7 @@
 
 ## Homebrew
 ```sh
-cat .brewlist | xargs brew install
+brew bundle
 ```
 
 ## Vim
