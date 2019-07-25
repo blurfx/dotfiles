@@ -14,7 +14,7 @@ source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
 export LANG=ko_kr.UTF-8
-export TERM="xterm-256color"
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 ZSH_THEME="agnoster"
 USER=``
