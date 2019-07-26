@@ -1,17 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'junegunn/vim-easy-align'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'junegunn/goyo.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'bling/vim-airline'
-Plug 'leafgarland/typescript-vim'
 
+Plug 'bling/vim-airline'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree'
+Plug 'leafgarland/typescript-vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
-colorscheme PaperColor
+colorscheme seoul256
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
@@ -55,5 +58,6 @@ endif
 
 filetype plugin indent on
 
-map <F2> :Le<CR>
+nmap <F2> <C-o>
+nmap <C-o> :NERDTreeToggle<CR>
 nmap <Space> <PageDown>
