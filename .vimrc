@@ -7,10 +7,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree'
 Plug 'leafgarland/typescript-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -50,6 +51,7 @@ set smartcase
 set splitright
 set tabstop=4 shiftwidth=4 expandtab
 set ttyfast
+set hidden
 highlight CursorLine cterm=underline gui=underline
 
 if $TERM == "xterm-256color"
@@ -61,3 +63,9 @@ filetype plugin indent on
 nmap <F2> <C-o>
 nmap <C-o> :NERDTreeToggle<CR>
 nmap <Space> <PageDown>
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
