@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="~/.oh-my-zsh"
+export LANG=en_US.UTF-8
 
 plugins=(
   git
@@ -13,7 +14,6 @@ plugins=(
 source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
-export LANG=ko_kr.UTF-8
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 ZSH_THEME="agnoster"
@@ -27,6 +27,7 @@ alias g17='g++ -o2 -std=c++17'
 alias gsgsd="git stash;git stash drop"
 alias zshconf="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+alias pa="pyenv activate"
 
 #zplug plugins
 source ~/.zplug/init.zsh
