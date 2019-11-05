@@ -11,7 +11,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -64,8 +63,8 @@ nmap <F2> <C-o>
 nmap <C-o> :NERDTreeToggle<CR>
 nmap <Space> <PageDown>
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+autocmd FileType c,cpp,java,scala,go let b:comment_block = '// '
+autocmd FileType sh,python let b:comment_block = '# '
+autocmd FileType vim let b:comment_block = '" '
+noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
