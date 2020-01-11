@@ -5,16 +5,18 @@ Plug 'bling/vim-airline'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'leafgarland/typescript-vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
-colorscheme seoul256
+colorscheme PaperColor
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
@@ -24,6 +26,7 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
+let g:indent_guides_enable_on_vim_startup = 1
 
 syntax on
 set autoindent
