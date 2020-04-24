@@ -66,6 +66,7 @@ autocmd FileType vim let b:comment_block = '" '
 nmap <F2> <C-o>
 nmap <C-o> :NERDTreeToggle<CR>
 nmap <Space> <PageDown>
+nmap <M-Space> <PageUp>
 
 noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
