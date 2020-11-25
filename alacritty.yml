@@ -1,0 +1,36 @@
+env:
+  TERM: xterm-256color
+
+window:
+  dynamic_padding: false
+  decorations: full
+  startup_mode: Windowed
+
+
+scrolling:
+  history: 100000
+
+font:
+  normal:
+    family: "MesloLGS NF"
+
+  bold:
+    family: "MesloLGS NF"
+
+  italic:
+    family: "MesloLGS NF"
+
+  size: 14.0
+
+mouse:
+  hide_when_typing: true
+
+selection:
+  save_to_clipboard: true
+
+live_config_reload: true
+
+key_bindings:
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
+
