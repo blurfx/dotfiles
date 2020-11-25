@@ -27,6 +27,13 @@ mouse:
 
 selection:
   save_to_clipboard: true
+  
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux"
 
 live_config_reload: true
 
