@@ -7,6 +7,8 @@
 	stl = !git stash list | fzf --preview 'echo {} | cut -d: -f1 | xargs git stash show -p --color=always' --height 90% | cut -d: -f1
 	sta = !git stl | xargs git stash apply
 	std = !git stl | xargs git stash drop
+	prune = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
+	prune-force = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
 [gpg]
 	program = gpg
 [commit]
