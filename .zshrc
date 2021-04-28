@@ -3,10 +3,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.poetry/bin:$PATH
 export PATH=$HOME/.config/JetBrains:$PATH
-export PATH=/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH
-export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 export LANG=ko_KR.UTF-8
 
