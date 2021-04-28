@@ -10,7 +10,6 @@ cnoreabbrev Q q
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
@@ -31,12 +30,13 @@ Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'bluz71/vim-moonfly-colors'
 
 call plug#end()
 
-let g:impact_transbg=1
-colorscheme PaperColor
+colorscheme moonfly
 
+let g:impact_transbg=1
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
@@ -45,6 +45,8 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
+let g:moonflyUnderlineMatchParen = 1
+let g:moonflyTransparent = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:coc_global_extensions = [
 \ 'coc-tsserver',
