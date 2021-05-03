@@ -31,6 +31,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'bluz71/vim-moonfly-colors'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -51,6 +52,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:coc_global_extensions = [
 \ 'coc-tsserver',
 \ 'coc-eslint',
+\ 'coc-rls',
 \ ]
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -85,7 +87,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set ttyfast
 set hidden
 set termguicolors
-highlight CursorLine cterm=underline gui=underline
+highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
 
 filetype plugin indent on
