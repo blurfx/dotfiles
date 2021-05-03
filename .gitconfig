@@ -9,6 +9,7 @@
 	std = !git stl | xargs git stash drop
 	prune = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 	prune-force = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
+	sd = !git diff | git-split-diffs --color | less -RFX
 [gpg]
 	program = gpg
 [commit]
