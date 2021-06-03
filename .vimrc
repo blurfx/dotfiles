@@ -54,6 +54,7 @@ let g:coc_global_extensions = [
 \ 'coc-eslint',
 \ 'coc-rls',
 \ ]
+let NERDTreeShowHidden=1
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
