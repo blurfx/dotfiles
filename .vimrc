@@ -96,7 +96,7 @@ highlight IndentGuidesOdd  ctermbg=lightgrey
 filetype plugin indent on
 
 " indentation
-autocmd FileType javascript,typescript,html,css setloccal tabstop=2 shiftwidth=2
+autocmd FileType javascript,typescript,html,css setlocal tabstop=2 shiftwidth=2
 
 " comment block
 autocmd FileType c,cpp,java,scala,go,javascript,typescript let b:comment_block = '// '
