@@ -66,7 +66,6 @@ let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 syntax on
 set autoindent
 " set background=dark
-set backspace=2
 set backspace=indent,eol,start
 set cindent
 set cul
@@ -85,11 +84,14 @@ set ruler
 set showmatch
 set showmode
 set smartcase
+set smarttab
 set splitright
 set tabstop=4 shiftwidth=4 expandtab
 set ttyfast
 set hidden
 set termguicolors
+set incsearch
+
 highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
 
@@ -108,6 +110,9 @@ nmap <C-o> :NERDTreeToggle<CR>
 nmap <Space> <PageDown>
 nmap <M-Space> <PageUp>
 
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
 
 noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
