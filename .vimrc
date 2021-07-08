@@ -91,6 +91,7 @@ set ttyfast
 set hidden
 set termguicolors
 set incsearch
+set autoread
 
 highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
