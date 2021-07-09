@@ -95,7 +95,13 @@ set incsearch
 highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
 
-filetype plugin indent on
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
 
 " indentation
 autocmd FileType javascript,javascriptreact,typescript,typescriptreact,html,css setlocal tabstop=2 shiftwidth=2
