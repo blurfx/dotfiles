@@ -33,17 +33,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-export ZPLUG_HOME=/usr/local/opt/zplug
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-source $ZPLUG_HOME/init.zsh
-
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
 
 ## run tmux when shell started
 # if type tmux > /dev/null && ! (( ${+TMUX} )) ; then
