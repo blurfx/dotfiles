@@ -1,6 +1,4 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/JetBrains:$PATH
@@ -40,11 +38,8 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 #     eval "tmux -2"
 # fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ bat ]] && alias cat="bat"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# export GPG_TTY=$(tty)
-
