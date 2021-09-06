@@ -1,5 +1,3 @@
-
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/JetBrains:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
@@ -38,6 +36,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 #     eval "tmux -2"
 # fi
 
+[[ exa ]] && alias ls="exa"
 [[ bat ]] && alias cat="bat"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
