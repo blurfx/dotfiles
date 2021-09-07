@@ -18,7 +18,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver'
 Plug 'neoclide/coc-eslint'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
