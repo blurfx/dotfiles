@@ -140,3 +140,13 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+function! IndentFn(value)
+    let &tabstop = a:value
+    let &shiftwidth = a:value
+    silent setlocal tabstop?
+    silent setlocal shiftwidth?
+    silent IndentGuidesToggle
+    silent IndentGuidesToggle
+endfunction
+
+:command! -nargs=1 Indent :call IndentFn(<q-args>)
