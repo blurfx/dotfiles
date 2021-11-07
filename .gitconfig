@@ -10,6 +10,7 @@
 	prune = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 	prune-force = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
 	sd = !git diff | git-split-diffs --color | less -RFX
+	pr = "!f() { git fetch origin pull/\"$1\"/head:pr-\"$1\" && git switch pr-\"$1\"; }; f"
 [gpg]
 	program = gpg
 [commit]
