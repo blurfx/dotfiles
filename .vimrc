@@ -1,4 +1,4 @@
-cnoreabbrev W! w!
+Gcnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Wq wq
 cnoreabbrev Wa wa
@@ -150,3 +150,4 @@ autocmd TermEnter term://*toggleterm#*
       \ tnoremap <silent><c-e> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 nnoremap <silent><c-e> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-e> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
+tnoremap <F1> <C-\><C-n><C-w>w
