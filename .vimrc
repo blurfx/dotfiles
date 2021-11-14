@@ -35,8 +35,9 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tpope/vim-fugitive'
-
-
+Plug 'blurfx/auto-indent.vim'
+Plug 'akinsho/toggleterm.nvim'
+ 
 call plug#end()
 
 colorscheme moonfly
@@ -140,12 +141,12 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
-function! IndentFn(value)
-    let &tabstop = a:value
-    let &shiftwidth = a:value
-    silent setlocal tabstop? shiftwidth?
-    silent IndentGuidesToggle
-    silent IndentGuidesToggle
-endfunction
+" auto-indent
+let g:autoindent_indent_size = 2
+let g:autoindent_expandtab = 0
 
-:command! -nargs=1 Indent :call IndentFn(<q-args>)
+" ToggleTerm
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><c-e> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+nnoremap <silent><c-e> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent><c-e> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
