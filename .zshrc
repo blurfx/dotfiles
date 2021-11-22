@@ -6,6 +6,8 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/JetBrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.asdf/bin:$PATH
+export PATH=$HOME/.asdf/shims:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 # zsh options
