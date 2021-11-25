@@ -50,7 +50,7 @@ alias pa='pyenv activate'
 ## common aliases
 alias l='ls -lFh'
 alias ll='ls -l'
-if [[ exa ]]; then
+if [ -x "$(command -v exa)" ]; then
   alias la='ls -laFh'
   alias lt='ls -lFh --sort=modified'
 else
@@ -88,10 +88,10 @@ alias gsw='git switch'
 alias gswc='git switch -c'
 
 # optional aliases
-[[ exa ]] && alias ls='exa'
-[[ bat ]] && alias cat='bat'
+[ -x "$(command -v exa)" ] && alias ls='exa'
+[ -x "$(command -v bat)" ] && alias cat='bat'
 
-if [[ nvim ]]; then
+if [ -x "$(command -v nvim)" ]; then
   export EDITOR='nvim'
   alias vim='nvim'
 else
