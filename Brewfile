@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+brew "antibody"
 brew "asdf"
 brew "awscli"
 brew "bat"
