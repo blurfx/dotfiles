@@ -10,6 +10,12 @@ export PATH=$HOME/.asdf/bin:$PATH
 export PATH=$HOME/.asdf/shims:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
+if [[ $(arch) == "arm64" ]]; then
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+else
+  export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+fi
+
 # zsh options
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -46,6 +52,9 @@ alias desk='cd ~/Desktop'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias pa='pyenv activate'
+
+alias za="arch -arch arm64e /bin/zsh"
+alias zx="arch -arch x86_64 /bin/zsh"
 
 ## common aliases
 alias l='ls -lFh'

@@ -29,11 +29,11 @@ selection:
   save_to_clipboard: true
   
 shell:
-  program: /bin/zsh
+  program: /opt/homebrew/bin/zsh
   args:
     - -l
     - -c
-    - "tmux"
+    - /opt/homebrew/bin/tmux
 
 live_config_reload: true
 
