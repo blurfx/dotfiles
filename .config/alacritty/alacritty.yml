@@ -29,7 +29,7 @@ selection:
   save_to_clipboard: true
   
 shell:
-  program: /opt/homebrew/bin/zsh
+  program: /bin/zsh
   args:
     - -l
     - -c
