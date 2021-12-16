@@ -111,7 +111,6 @@ fi
 source /opt/homebrew/opt/asdf/asdf.sh
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
-eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
