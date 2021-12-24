@@ -37,6 +37,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tpope/vim-fugitive'
 Plug 'blurfx/auto-indent.vim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'rescript-lang/vim-rescript'
+
  
 call plug#end()
 
