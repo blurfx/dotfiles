@@ -1,10 +1,6 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.config/JetBrains:$PATH
+export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.asdf/bin:$PATH
 export PATH=$HOME/.asdf/shims:$PATH
@@ -96,6 +92,10 @@ alias gsgsd='git stash && git stash drop'
 alias gsw='git switch'
 alias gswc='git switch -c'
 
+## etc aliases
+alias saml="AWS_PROFILE=saml"
+alias tf="terraform"
+
 # optional aliases
 [ -x "$(command -v exa)" ] && alias ls='exa'
 [ -x "$(command -v bat)" ] && alias cat='bat'
@@ -108,7 +108,6 @@ else
 fi
 
 # initialize things
-source /opt/homebrew/opt/asdf/asdf.sh
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 eval "$(zoxide init zsh)"
