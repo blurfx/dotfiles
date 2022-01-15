@@ -68,7 +68,7 @@ let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 
 syntax on
 set autoindent
-" set background=dark
+set background=dark
 set backspace=indent,eol,start
 set cindent
 set cul
