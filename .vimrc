@@ -1,4 +1,4 @@
-Gcnoreabbrev W! w!
+cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Wq wq
 cnoreabbrev Wa wa
