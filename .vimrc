@@ -125,6 +125,10 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 nnoremap Q @q
 
+nnoremap ]b :bnext<cr>
+nnoremap [b :bprev<cr>
+
+
 noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
 
