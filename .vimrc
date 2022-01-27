@@ -128,6 +128,12 @@ nnoremap Q @q
 nnoremap ]b :bnext<cr>
 nnoremap [b :bprev<cr>
 
+nnoremap ]t :tabn<cr>
+nnoremap [t :tabp<cr>
+
+nnoremap <tab>   <c-w>w
+nnoremap <S-tab> <c-w>W
+
 
 noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
