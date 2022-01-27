@@ -1,4 +1,4 @@
-Gcnoreabbrev W! w!
+cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Wq wq
 cnoreabbrev Wa wa
@@ -93,6 +93,8 @@ set hidden
 set termguicolors
 set incsearch
 set autoread
+set wildmenu
+set wildmode=full
 
 highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
