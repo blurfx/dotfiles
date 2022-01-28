@@ -4,6 +4,7 @@ export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.asdf/bin:$PATH
 export PATH=$HOME/.asdf/shims:$PATH
+export PATH=$HOME/go/bin:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 if [[ $(arch) == "arm64" ]]; then
