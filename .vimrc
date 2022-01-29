@@ -95,6 +95,9 @@ set incsearch
 set autoread
 set wildmenu
 set wildmode=full
+set backupdir=/tmp//,.
+set directory=/tmp//,.
+
 
 highlight CursorLine cterm=bold gui=bold
 highlight IndentGuidesOdd  ctermbg=lightgrey
