@@ -114,3 +114,4 @@ antibody bundle < ~/.zsh_plugins.txt
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+autoload -Uz compinit && compinit
