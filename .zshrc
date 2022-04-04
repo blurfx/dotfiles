@@ -96,6 +96,7 @@ alias gswc='git switch -c'
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
 alias tf="terraform"
+alias k="kubectl"
 
 # optional aliases
 [ -x "$(command -v exa)" ] && alias ls='exa'
