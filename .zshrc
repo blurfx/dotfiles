@@ -76,7 +76,7 @@ alias gb='git branch'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gcd='git switch $(git_develop_branch)'
-alias gcl='git clone'
+alias gcl='git clone --recursive'
 alias gcm='git switch $(git_main_branch)'
 alias gcmsg='git commit -S -m'
 alias gd='git diff'
@@ -115,3 +115,4 @@ antibody bundle < ~/.zsh_plugins.txt
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+autoload -Uz compinit && compinit
