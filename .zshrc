@@ -1,4 +1,7 @@
+autoload -Uz +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 # path
+#
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
@@ -115,4 +118,3 @@ antibody bundle < ~/.zsh_plugins.txt
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-autoload -Uz compinit && compinit
