@@ -1,7 +1,13 @@
 autoload -Uz +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 # path
-#
+
+if [[ $(arch) == "arm64" ]]; then
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+else
+  export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+fi
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
@@ -10,12 +16,6 @@ export PATH=$HOME/.asdf/shims:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-if [[ $(arch) == "arm64" ]]; then
-  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
-else
-  export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-fi
 
 # zsh options
 HISTSIZE=10000000
