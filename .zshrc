@@ -100,7 +100,6 @@ alias gswc='git switch -c'
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
 alias tf="terraform"
-alias k="kubectl"
 
 # optional aliases
 [ -x "$(command -v exa)" ] && alias ls='exa'
@@ -111,6 +110,10 @@ if [ -x "$(command -v nvim)" ]; then
   alias vim='nvim'
 else
   export EDITOR='vim'
+fi
+
+if [ -x "$(command -v kubectl)" ]; then
+  alias k="kubectl"
 fi
 
 # initialize things
