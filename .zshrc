@@ -47,6 +47,13 @@ function git_develop_branch() {
   echo develop
 }
 
+function has() {
+  if [ -x "$(command -v $1)" ]; then
+    return true
+  fi
+  return false
+}
+
 # command aliases
 ## custom aliases
 alias desk='cd ~/Desktop'
@@ -60,7 +67,7 @@ alias zx="arch -arch x86_64 /bin/zsh"
 ## common aliases
 alias l='ls -lFh'
 alias ll='ls -l'
-if [ -x "$(command -v exa)" ]; then
+if has "exa"; then
   alias la='ls -laFh'
   alias lt='ls -lFh --sort=modified'
 else
@@ -102,17 +109,17 @@ alias saml="AWS_PROFILE=saml"
 alias tf="terraform"
 
 # optional aliases
-[ -x "$(command -v exa)" ] && alias ls='exa'
-[ -x "$(command -v bat)" ] && alias cat='bat'
+has "exa" && alias ls='exa'
+has "bat" && alias cat='bat'
 
-if [ -x "$(command -v nvim)" ]; then
+if has "nvim"; then
   export EDITOR='nvim'
   alias vim='nvim'
 else
   export EDITOR='vim'
 fi
 
-if [ -x "$(command -v kubectl)" ]; then
+if has "kubectl"; then
   alias k="kubectl"
 fi
 
