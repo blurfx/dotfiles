@@ -148,7 +148,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
+function! s:check_back_space()
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
