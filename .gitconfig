@@ -11,6 +11,8 @@
 	prune-force = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
 	sd = !git diff | git-split-diffs --color | less -RFX
 	pr = "!f() { git fetch origin pull/\"$1\"/head:pr-\"$1\" && git switch pr-\"$1\"; }; f"
+	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
+
 [pager]
 	diff = delta
 	log = delta
