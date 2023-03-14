@@ -54,6 +54,11 @@ function has() {
   return false
 }
 
+function showpack() {
+  jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "|"
+}
+
+
 # command aliases
 ## custom aliases
 alias desk='cd ~/Desktop'
