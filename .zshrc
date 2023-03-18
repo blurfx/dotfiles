@@ -55,7 +55,7 @@ function has() {
 }
 
 function showpack() {
-  jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "|"
+  jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "| "
 }
 
 
