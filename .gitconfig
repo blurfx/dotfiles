@@ -12,6 +12,7 @@
 	sd = !git diff | git-split-diffs --color | less -RFX
 	pr = "!f() { git fetch origin pull/\"$1\"/head:pr-\"$1\" && git switch pr-\"$1\"; }; f"
 	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
+	frail = "!f() { git for-each-ref --format='%(committerdate:short) %(refname:short)' refs/heads | awk -v date=$(date -v-\"$1\"d +%Y-%m-%d) '$1 <= date && $2 !~ /(main|master|prod|develop)/ { print $2 }' | xargs -r git branch -D; }; f"
 
 [pager]
 	diff = delta
