@@ -57,7 +57,11 @@ function has() {
 function showpack() {
   jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "| "
 }
+ 
 
+# global aliases
+alias -g ...='../..'
+alias -g ....='../../..'
 
 # command aliases
 ## custom aliases
