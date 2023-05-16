@@ -57,6 +57,7 @@ let g:coc_global_extensions = [
 \ 'coc-tsserver',
 \ 'coc-eslint',
 \ 'coc-rls',
+\ 'coc-go',
 \ ]
 let NERDTreeShowHidden=1
 
@@ -142,11 +143,9 @@ nnoremap <S-tab> <c-w>W
 noremap <silent> ,, :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_block,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_block,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <cr> "\C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
 
 function! s:check_back_space()
   let col = col('.') - 1
