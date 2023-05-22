@@ -1,0 +1,15 @@
+{
+  "auto-indent.vim": { "branch": "main", "commit": "214ec85f5d891e1b9e9957d7f3cb8109c373d645" },
+  "coc.nvim": { "branch": "release", "commit": "bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043" },
+  "copilot.vim": { "branch": "release", "commit": "1358e8e45ecedc53daf971924a0541ddf6224faf" },
+  "fzf": { "branch": "master", "commit": "37f258b1bf863633205548e7b8194776daab463b" },
+  "lazy.nvim": { "branch": "main", "commit": "6610b15dfd76f7992423916e2b87f031881d7b25" },
+  "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
+  "neoconf.nvim": { "branch": "main", "commit": "bbf98ce53481e6e8d6507de5a6f18d3264fb0df7" },
+  "neodev.nvim": { "branch": "main", "commit": "781a090a30868373b37357a582b4fa7e7383298b" },
+  "nvim-web-devicons": { "branch": "master", "commit": "e283ab937e0197b37ec5d8013e49495193407324" },
+  "onedark.vim": { "branch": "main", "commit": "4e983447f0442dba1629cdaeddfd137793d71d28" },
+  "vim-go": { "branch": "master", "commit": "2a874910a242fd4a5da021ea32fb1cde3b69f79b" },
+  "vim-wakatime": { "branch": "master", "commit": "02be9238319937e04afea73fd0fc7da5413ee041" },
+  "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" }
+}
