@@ -1,3 +1,7 @@
+local script_path = debug.getinfo(1, "S").source:sub(2)
+local script_dir = script_path:match("(.*[/\\])")
+package.path = package.path .. ";" .. script_dir .. "?.lua"
+
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -10,7 +14,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 
 require('lazy').setup({
   -- UI
