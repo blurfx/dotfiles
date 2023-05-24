@@ -84,6 +84,14 @@ vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 15
 
 -- Vim key mappings
+vim.g.mapleader = ','
+
 vim.keymap.set('n', '<Space>', '<PageDown>', {})
 vim.keymap.set('n', '<M-Space>', '<PageUp>', {})
+
+vim.keymap.set('n', '<leader>t', ':enew<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>[', ':bprevious<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>]', ':bnext<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>w', ':bdelete<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>W', ':bdelete!<CR>', { noremap = true })
 
