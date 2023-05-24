@@ -29,12 +29,15 @@ require('lazy').setup({
   require('plugins.productivity'),
 })
 
--- enable filetype detection and indentation
-
-
-
-
 -- Vim Built-in settings
+vim.cmd.cnoreabbrev('W!', 'w!')
+vim.cmd.cnoreabbrev('Q!', 'q!')
+vim.cmd.cnoreabbrev('Wq', 'wq')
+vim.cmd.cnoreabbrev('Wa', 'wa')
+vim.cmd.cnoreabbrev('wQ', 'wq')
+vim.cmd.cnoreabbrev('WQ', 'wq')
+vim.cmd.cnoreabbrev('W', 'w')
+vim.cmd.cnoreabbrev('Q', 'q')
 vim.cmd('filetype plugin indent on')
 vim.cmd('highlight CursorLine cterm=bold gui=bold')
 vim.o.syntax = 'on'
