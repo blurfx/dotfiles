@@ -3,7 +3,9 @@ env:
 
 window:
   dynamic_padding: false
-  decorations: full
+  decorations: transparent
+  padding:
+    y: 26
   startup_mode: Windowed
 
 
