@@ -13,6 +13,22 @@ return {
       },
     },
   },
+  {
+    'nvim-tree/nvim-tree.lua',
+    init = function()
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+    end,
+    config = function()
+      require('nvim-tree').setup({
+        renderer = {
+          highlight_git = true,
+        }
+      })
+
+      vim.keymap.set('', '<C-o>', '<Esc>:NvimTreeToggle<CR>', { noremap = true, silent = true })
+    end
+  },
   'nvim-tree/nvim-web-devicons',
   {
     'joshdick/onedark.vim',

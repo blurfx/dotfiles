@@ -76,22 +76,21 @@ vim.o.wildignorecase = true
 vim.o.backupdir = '/tmp//,'
 vim.o.directory = '/tmp//,'
 
--- Vim built-in filetree settings
-vim.g.netrw_liststyle = 3
-vim.g.netrw_banner = 0
-vim.g.netrw_browse_split = 0
-vim.g.netrw_altv = 1
-vim.g.netrw_winsize = 15
-
 -- Vim key mappings
 vim.g.mapleader = ','
 
 vim.keymap.set('n', '<Space>', '<PageDown>', {})
 vim.keymap.set('n', '<M-Space>', '<PageUp>', {})
 
-vim.keymap.set('n', '<leader>t', ':enew<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>bn', ':enew<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>[', ':bprevious<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>]', ':bnext<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>w', ':bdelete<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>W', ':bdelete!<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>bc', ':bdelete<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>bC', ':bdelete!<CR>', { noremap = true })
+
+vim.keymap.set('n', '<leader>tt', ':tabnew<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>t[', ':tabprevious<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>t]', ':tabnext<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tC', ':tabclose!<CR>', { noremap = true })
 
