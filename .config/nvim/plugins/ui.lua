@@ -31,6 +31,33 @@ return {
   },
   'nvim-tree/nvim-web-devicons',
   {
+    'goolord/alpha-nvim',
+    event = 'VimEnter',
+    config = function()
+      local alpha = require('alpha')
+      local dashboard = require('alpha.themes.dashboard')
+      dashboard.section.header.val = {
+        [[██╗  ██╗ ██████╗ ]],
+        [[╚██╗██╔╝██╔═══██╗]],
+        [[ ╚███╔╝ ██║   ██║]],
+        [[ ██╔██╗ ██║   ██║]],
+        [[██╔╝ ██╗╚██████╔╝]],
+        [[╚═╝  ╚═╝ ╚═════╝ ]],
+      }
+      dashboard.section.buttons.val = {
+        dashboard.button("e", "  New file" , ":ene <BAR> startinsert <CR>"),
+        dashboard.button("b", "  Buffers" , ":Telescope buffers<CR>"),
+        dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
+        dashboard.button("r", "  Recent"   , ":Telescope oldfiles<CR>"),
+     -- dashboard.button("s", "  Open Last Session", ':source ~/.config/nvim/session.vim<CR>'),
+        dashboard.button("c", "  Config" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
+        dashboard.button("q", "  Quit", ":qa<CR>"),
+      }
+      alpha.setup(dashboard.config)
+    end,
+    dependencies = {{'nvim-tree/nvim-web-devicons'}},
+  },
+  {
     'joshdick/onedark.vim',
     config = function()
       vim.cmd.colorscheme('onedark')

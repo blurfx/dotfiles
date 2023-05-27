@@ -1,4 +1,5 @@
 {
+  "alpha-nvim": { "branch": "main", "commit": "1838ae926e8d49fe5330d1498ee8289ae2c340bc" },
   "auto-indent.vim": { "branch": "main", "commit": "214ec85f5d891e1b9e9957d7f3cb8109c373d645" },
   "barbar.nvim": { "branch": "master", "commit": "b8ca6076f75e49cca1fa0288c080f3d10ec2152c" },
   "coc.nvim": { "branch": "release", "commit": "bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043" },
