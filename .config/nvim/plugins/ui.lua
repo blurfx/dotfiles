@@ -25,7 +25,6 @@ return {
           highlight_git = true,
         }
       })
-
       vim.keymap.set('', '<C-o>', '<Esc>:NvimTreeToggle<CR>', { noremap = true, silent = true })
     end
   },
@@ -117,4 +116,13 @@ return {
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
   'blurfx/auto-indent.vim',
+  {
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup({
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+      })
+    end,
+  },
 }
