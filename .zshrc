@@ -114,6 +114,7 @@ if has "git"; then
   alias gsgsd='git stash && git stash drop'
   alias gsw='git switch'
   alias gswc='git switch -c'
+  alias gswd='git switch -d'
 fi
 
 ## etc aliases
