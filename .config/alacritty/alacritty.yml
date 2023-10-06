@@ -61,7 +61,7 @@ key_bindings:
   - { key: P,         mods: Command,       chars: "\x1bp"  }
   - { key: Q,         mods: Command,       chars: "\x1bq"  }
   - { key: R,         mods: Command,       chars: "\x1br"  }
-  - { key: S,         mods: Command,       chars: "\x1bs"  }
+  # - { key: S,         mods: Command,       chars: "\x1bs"  }
   # - { key: T,         mods: Command,       chars: "\x1bt"  }
   - { key: U,         mods: Command,       chars: "\x1bu"  }
   # - { key: W,         mods: Command,       chars: "\x1bw"  }
@@ -116,6 +116,7 @@ key_bindings:
   - { key: X,         mods: Command|Shift, chars: "\x1bX"  }
   - { key: Y,         mods: Command|Shift, chars: "\x1bY"  }
   - { key: Z,         mods: Command|Shift, chars: "\x1bZ"  }
+  - { key: S, mods: Command, chars: "\x02q" }
   - { key: T, mods: Command, chars: "\x02c" }
   - { key: W, mods: Command, chars: "\x02X" }
   - { key: D, mods: Command|Shift, chars: "\x02\x22" }
