@@ -68,16 +68,25 @@ key_bindings:
   - { key: X,         mods: Command,       chars: "\x1bx"  }
   - { key: Y,         mods: Command,       chars: "\x1by"  }
   - { key: Z,         mods: Command,       chars: "\x1bz"  }
-  - { key: Key1,      mods: Command,       chars: "\x1b1"  }
-  - { key: Key2,      mods: Command,       chars: "\x1b2"  }
-  - { key: Key3,      mods: Command,       chars: "\x1b3"  }
-  - { key: Key4,      mods: Command,       chars: "\x1b4"  }
-  - { key: Key5,      mods: Command,       chars: "\x1b5"  }
-  - { key: Key6,      mods: Command,       chars: "\x1b6"  }
-  - { key: Key7,      mods: Command,       chars: "\x1b7"  }
-  - { key: Key8,      mods: Command,       chars: "\x1b8"  }
-  - { key: Key9,      mods: Command,       chars: "\x1b9"  }
+  # - { key: Key1,      mods: Command,       chars: "\x1b1"  }
+  # - { key: Key2,      mods: Command,       chars: "\x1b2"  }
+  # - { key: Key3,      mods: Command,       chars: "\x1b3"  }
+  # - { key: Key4,      mods: Command,       chars: "\x1b4"  }
+  # - { key: Key5,      mods: Command,       chars: "\x1b5"  }
+  # - { key: Key6,      mods: Command,       chars: "\x1b6"  }
+  # - { key: Key7,      mods: Command,       chars: "\x1b7"  }
+  # - { key: Key8,      mods: Command,       chars: "\x1b8"  }
+  # - { key: Key9,      mods: Command,       chars: "\x1b9"  }
   - { key: Key0,      mods: Command,       chars: "\x1b0"  }
+  - { key: Key1, mods: Command, chars: "\x02\x31" }
+  - { key: Key2, mods: Command, chars: "\x02\x32" }
+  - { key: Key3, mods: Command, chars: "\x02\x33" }
+  - { key: Key4, mods: Command, chars: "\x02\x34" }
+  - { key: Key5, mods: Command, chars: "\x02\x35" }
+  - { key: Key6, mods: Command, chars: "\x02\x36" }
+  - { key: Key7, mods: Command, chars: "\x02\x36" }
+  - { key: Key8, mods: Command, chars: "\x02\x37" }
+  - { key: Key9, mods: Command, chars: "\x02\x39" }
   - { key: Backslash, mods: Command,       chars: "\x1b\\" } # Command + \
   - { key: Grave,     mods: Command,       chars: "\x1b`"  } # Command + `
   - { key: Period,    mods: Command,       chars: "\x1b."  } # Command + .
