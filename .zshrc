@@ -109,6 +109,7 @@ if has "git"; then
   alias gloga='git log --oneline --decorate --graph --all'
   alias gm='git merge'
   alias gp='git push'
+  alias gpup='git push -u'
   alias gpf='git push --force'
   alias gst='git status'
   alias gsgsd='git stash && git stash drop'
