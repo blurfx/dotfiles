@@ -57,7 +57,7 @@ function has() {
 function showpack() {
   jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "| "
 }
- 
+
 
 # global aliases
 alias -g ...='../..'
@@ -118,6 +118,23 @@ if has "git"; then
   alias gswc='git switch -c'
   alias gswd='git switch -d'
 fi
+
+# npm scripts
+insert_npm_script() {
+  if [[ ! -f package.json ]]; then
+    return 1
+  fi
+  local script=$(jq -r ".scripts | to_entries[] | \"\(.key) \t \(.value)\"" package.json | column -t -s $'\t' | fzf | awk '{print $1}')
+  if [[ -n $script ]]; then
+    LBUFFER+="$script"
+    zle reset-prompt
+  fi
+}
+zle -N insert_npm_script
+bindkey -M emacs '^J' insert_npm_script
+bindkey -M vicmd '^J' insert_npm_script
+bindkey -M viins '^J' insert_npm_script
+bindkey '^J' insert_npm_script
 
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
