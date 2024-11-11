@@ -1,18 +1,15 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 autoload -Uz +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 # path
 
-if [[ $(arch) == "arm64" ]]; then
-  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
-else
-  export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-fi
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.asdf/bin:$PATH
-export PATH=$HOME/.asdf/shims:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
@@ -54,20 +51,16 @@ function has() {
   return false
 }
 
-function showpack() {
-  jq -r '.scripts | keys[] as $k | "\($k)| \(.[$k])"' package.json | column -t -s "| "
-}
-
-
 # global aliases
 alias -g ...='../..'
 alias -g ....='../../..'
+alias -g .....='../../../..'
 
 # command aliases
 ## custom aliases
 alias desk='cd ~/Desktop'
 alias zshrc='vim ~/.zshrc'
-alias vimrc='vim ~/.vimrc'
+alias vimrc='vim ~/.config/nvim'
 alias pa='pyenv activate'
 
 alias za="arch -arch arm64e /bin/zsh"
@@ -76,7 +69,7 @@ alias zx="arch -arch x86_64 /bin/zsh"
 ## common aliases
 alias l='ls -lFh'
 alias ll='ls -l'
-if has "exa"; then
+if has "eza"; then
   alias la='ls -laFh'
   alias lt='ls -lFh --sort=modified'
 else
@@ -138,11 +131,13 @@ bindkey '^J' insert_npm_script
 
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
-alias tf="terraform"
 
 # optional aliases
-has "exa" && alias ls='exa'
+has "eza" && alias ls='eza'
 has "bat" && alias cat='bat'
+has "zoxide" && alias cd='z'
+has "kubectl" && alias k="kubectl"
+has "terraform" && alias tf="terraform"
 
 if has "nvim"; then
   export EDITOR='nvim'
@@ -151,13 +146,11 @@ else
   export EDITOR='vim'
 fi
 
-if has "kubectl"; then
-  alias k="kubectl"
-fi
-
 # initialize things
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
+
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
