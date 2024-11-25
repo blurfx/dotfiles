@@ -59,6 +59,7 @@ vim.o.laststatus = 2
 vim.o.lazyredraw = true
 vim.o.mouse = 'nicr'
 vim.o.number = true
+vim.o.relativenumber = true
 vim.o.ruler = true
 vim.o.showmatch = true
 vim.o.showmode = true
