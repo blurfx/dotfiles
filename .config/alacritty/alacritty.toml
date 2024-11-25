@@ -86,7 +86,7 @@ key = "N"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u001Bp"
+chars = "\u0002p"
 key = "P"
 mods = "Command"
 
