@@ -96,7 +96,7 @@ key = "Q"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u001Br"
+chars = "\u0002r"
 key = "R"
 mods = "Command"
 

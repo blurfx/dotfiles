@@ -1,5 +1,5 @@
 return {
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
   {
     'neoclide/coc.nvim',
     branch = 'release',
