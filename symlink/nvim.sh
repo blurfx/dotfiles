@@ -1,3 +1,3 @@
 #/bin/sh
 mkdir -p ~/.config
-ln -s ~/personal/dotfiles/.config/nvim ~/.config/
+ln -s $(pwd)/../.config/nvim ~/.config/

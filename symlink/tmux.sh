@@ -1,3 +1,5 @@
 #/bin/sh
 mkdir -p ~/.config
-ln -s ~/personal/dotfiles/.tmux.conf ~/.tmux.conf
+mkdir -p ~/.tmux
+ln -s $(pwd)/../.tmux.conf ~/.tmux.conf || true
+ln -s $(pwd)/../.tmux/weather.sh ~/.tmux/weather.sh || true
