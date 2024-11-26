@@ -95,7 +95,7 @@ key = "Q"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002r"
+chars = "\u0002,"
 key = "R"
 mods = "Command"
 
@@ -290,7 +290,7 @@ key = "M"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u001BN"
+chars = "\u0002N"
 key = "N"
 mods = "Command|Shift"
 
@@ -300,7 +300,7 @@ key = "P"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u001BR"
+chars = "\u0002$"
 key = "R"
 mods = "Command|Shift"
 
@@ -423,13 +423,10 @@ args = ["-l", "-c", "/opt/homebrew/bin/tmux"]
 program = "/bin/zsh"
 
 [window]
-decorations = "transparent"
-dynamic_padding = false
+decorations = "none"
+dynamic_padding = true
 startup_mode = "Windowed"
 option_as_alt = "Both"
-
-[window.padding]
-y = 26
 
 [general]
 live_config_reload = true
