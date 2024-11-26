@@ -47,20 +47,18 @@ function has() {
   return false
 }
 
-# global aliases
+# aliases
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
-# command aliases
-## custom aliases
 alias desk='cd ~/Desktop'
 alias zshrc='vim ~/.zshrc'
+alias zshcrc='vim ~/.zsh/common.zsh'
 alias vimrc='vim ~/.config/nvim'
 alias tmuxconf='vim ~/.tmux.conf'
 alias pa='pyenv activate'
 
-## common aliases
 alias l='ls -lhF'
 alias ll='ls -l'
 if has "eza"; then
@@ -75,7 +73,6 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-## git aliases
 if has "git"; then
   alias g='git'
   alias ga='git add'
