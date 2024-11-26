@@ -2,7 +2,7 @@ autoload -Uz +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 # path
 
-export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.config/jetbrains:$PATH
 export PATH=$HOME/.cargo/bin:$PATH

@@ -419,7 +419,7 @@ history = 100000
 save_to_clipboard = true
 
 [terminal.shell]
-args = ["-l", "-c", "/opt/homebrew/bin/tmux"]
+args = ["-l", "-c", "tmux"]
 program = "/bin/zsh"
 
 [window]

@@ -43,9 +43,9 @@ if [[ $last_answer == "Y" ]]; then
     ensure_zshrc_source
 fi
 
-symlink_prompt "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/alacritty" "alacritty config"
+symlink_prompt "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/" "alacritty config"
 
-symlink_prompt "$SCRIPT_DIR/.config/nvim" "$HOME/.config/nvim" "nvim config"
+symlink_prompt "$SCRIPT_DIR/.config/nvim" "$HOME/.config" "nvim config"
 
 symlink_prompt "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf" "tmux config"
 if [[ $last_answer == "Y" ]]; then
