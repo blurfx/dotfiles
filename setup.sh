@@ -25,9 +25,22 @@ symlink_prompt() {
     last_answer=$answer
 }
 
+ensure_zshrc_source() {
+    local source_line='source "$HOME/.zsh/common.zsh"'
+    local zshrc_file="$HOME/.zshrc"
+
+    if ! grep -Fxq "$source_line" "$zshrc_file"; then
+        (echo "$source_line"; cat "$zshrc_file") > "$zshrc_file.tmp" && mv "$zshrc_file.tmp" "$zshrc_file"
+        echo "Added '$source_line' to the top of $zshrc_file"
+    else
+        echo "'$source_line' already present in $zshrc_file"
+    fi
+}
+
 symlink_prompt "$SCRIPT_DIR/.zsh/common.zsh" "$HOME/.zsh/common.zsh" "zsh config"
 if [[ $last_answer == "Y" ]]; then
     create_symlink "$SCRIPT_DIR/.zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
+    ensure_zshrc_source
 fi
 
 symlink_prompt "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/alacritty" "alacritty config"
