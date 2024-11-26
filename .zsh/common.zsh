@@ -1,7 +1,3 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 autoload -Uz +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 # path
@@ -61,20 +57,18 @@ alias -g .....='../../../..'
 alias desk='cd ~/Desktop'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.config/nvim'
+alias tmuxconf='vim ~/.tmux.conf'
 alias pa='pyenv activate'
 
-alias za="arch -arch arm64e /bin/zsh"
-alias zx="arch -arch x86_64 /bin/zsh"
-
 ## common aliases
-alias l='ls -lFh'
+alias l='ls -lhF'
 alias ll='ls -l'
 if has "eza"; then
-  alias la='ls -laFh'
-  alias lt='ls -lFh --sort=modified'
+  alias la='ls -lahF'
+  alias lt='ls -lhF --sort=modified'
 else
-  alias la='ls -lAFh'
-  alias lt='ls -ltFh'
+  alias la='ls -lAhF'
+  alias lt='ls -lthF'
 fi
 alias grep='grep --color'
 alias rm='rm -i'
@@ -131,8 +125,7 @@ bindkey '^J' insert_npm_script
 
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
-
-# optional aliases
+alias tf="terraform"
 has "eza" && alias ls='eza'
 has "bat" && alias cat='bat'
 has "zoxide" && alias cd='z'
@@ -146,11 +139,12 @@ else
   export EDITOR='vim'
 fi
 
+has "zoxide" && eval "$(zoxide init zsh)"
+
 # initialize things
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 
-eval "$(zoxide init zsh)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
