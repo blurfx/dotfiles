@@ -14,6 +14,9 @@
 	pr = "!f() { git fetch origin pull/\"$1\"/head:pr-\"$1\" && git switch pr-\"$1\"; }; f"
 	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
 	stale = "!f() { git for-each-ref --format='%(committerdate:short) %(refname:short)' refs/heads | awk -v date=$(date -v-\"$1\"d +%Y-%m-%d) '$1 <= date && $2 !~ /(main|master|prod|develop)/ { print $2 }' | xargs -r git branch -D; }; f"
+	open = "!f() { echo \"$(git remote get-url origin | sed -E 's/git@(.+)\\:(.+)\\.git/https:\\/\\/\\1\\/\\2/')\" | xargs open; }; f"
+	newpr = "!f() { echo \"$(git remote get-url origin | sed -E 's/git@(.+)\\:(.+)\\.git/https:\\/\\/\\1\\/\\2/')/pull/new/$(git branch --show-current)\" | xargs open; }; f"
+
 
 [pager]
 	diff = delta
