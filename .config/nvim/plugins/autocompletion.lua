@@ -1,6 +1,12 @@
 return {
   -- 'github/copilot.vim',
   {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
+    end,
+  },
+  {
     'neoclide/coc.nvim',
     branch = 'release',
     init = function()
