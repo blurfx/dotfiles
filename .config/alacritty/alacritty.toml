@@ -424,10 +424,10 @@ program = "/bin/zsh"
 [window]
 decorations = "None"
 dynamic_padding = true
-startup_mode = "SimpleFullscreen"
+startup_mode = "Windowed"
 option_as_alt = "Both"
 blur = true
-opacity = 0.1
+opacity = 0.9
 
 
 [general]
