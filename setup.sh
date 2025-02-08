@@ -51,6 +51,7 @@ symlink_prompt "$SCRIPT_DIR/.config/nvim" "$HOME/.config" "nvim config"
 
 symlink_prompt "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf" "tmux config"
 if [[ $last_answer == "Y" ]]; then
+    mkdir -p "$HOME/.tmux"
     create_symlink "$SCRIPT_DIR/.tmux/weather.sh" "$HOME/.tmux/weather.sh"
     create_symlink "$SCRIPT_DIR/.tmux/status-left.sh" "$HOME/.tmux/status-left.sh"
 fi
