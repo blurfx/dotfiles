@@ -115,11 +115,11 @@ insert_npm_script() {
     zle reset-prompt
   fi
 }
-zle -N insert_npm_script
-bindkey -M emacs '^J' insert_npm_script
-bindkey -M vicmd '^J' insert_npm_script
-bindkey -M viins '^J' insert_npm_script
-bindkey '^J' insert_npm_script
+# zle -N insert_npm_script
+# bindkey -M emacs '^J' insert_npm_script
+# bindkey -M vicmd '^J' insert_npm_script
+# bindkey -M viins '^J' insert_npm_script
+# bindkey '^J' insert_npm_script
 
 ## etc aliases
 alias saml="AWS_PROFILE=saml"
