@@ -63,10 +63,10 @@ alias l='ls -lhF'
 alias ll='ls -l'
 if has "eza"; then
   alias la='ls -lahF'
-  alias lt='ls -lhF --sort=modified'
+#  alias lt='ls -lhF --sort=modified'
 else
   alias la='ls -lAhF'
-  alias lt='ls -lthF'
+#  alias lt='ls -lthF'
 fi
 alias grep='grep --color'
 alias rm='rm -i'
@@ -97,6 +97,8 @@ if has "git"; then
   alias gp='git push'
   alias gpup='git push -u'
   alias gpf='git push --force'
+  alias gr='git restore'
+  alias grs='git restore --staged'
   alias gst='git status'
   alias gsgsd='git stash && git stash drop'
   alias gsw='git switch'
