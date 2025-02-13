@@ -81,7 +81,7 @@ vim.o.backupdir = '/tmp//,'
 vim.o.directory = '/tmp//,'
 
 -- Vim key mappings
-vim.g.mapleader = ','
+vim.g.mapleader = '\\'
 
 vim.keymap.set('n', '<Space>', '<PageDown>', {})
 vim.keymap.set('n', '<M-Space>', '<PageUp>', {})
@@ -97,6 +97,11 @@ vim.keymap.set('n', '<leader>t[', ':tabprevious<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>t]', ':tabnext<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>tC', ':tabclose!<CR>', { noremap = true })
+
+vim.keymap.set('n', ',', '*', { noremap = true })
+vim.keymap.set('n', '.', '#', { noremap = true })
+vim.keymap.set('n', '<A-,>', 'g*', { noremap = true })
+vim.keymap.set('n', '<A-.>', 'g#', { noremap = true })
 
 vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', { noremap = true })
 vim.keymap.set('n', '<C-k>', ':m .-2<CR>==', { noremap = true })
