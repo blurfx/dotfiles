@@ -334,7 +334,7 @@ key = "Y"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u001BZ"
+chars = "\u0002z"
 key = "Z"
 mods = "Command|Shift"
 
