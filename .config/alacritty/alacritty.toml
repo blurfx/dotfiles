@@ -14,9 +14,14 @@ family = "MesloLGS NF"
 family = "MesloLGS NF"
 
 [[keyboard.bindings]]
-chars = "\u0000"
-key = "Space"
-mods = "Control"
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u0002p"
@@ -27,7 +32,6 @@ mods = "Command"
 chars = "\u0002,"
 key = "R"
 mods = "Command"
-
 
 [[keyboard.bindings]]
 chars = "\u00021"
