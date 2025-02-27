@@ -1,3 +1,16 @@
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram  
+	colorMoved = plain  
+	mnemonicPrefix = true  
+	renames = true
 [alias]
 	co = "!f() { args=$@; if [ -z \"$args\" ]; then branch=$(git branch --all | cut -c 3- | grep -v HEAD | grep -v '^remotes/' | fzf --preview 'echo {} | xargs git log --color --graph'); git checkout $(echo $branch | sed 's#remotes/[^/]*/##'); else git checkout $args; fi }; f"
 	rco = "!f() { args=$@; if [ -z \"$args\" ]; then branch=$(git branch --all | grep -v HEAD | fzf --preview 'echo {} | cut -c 3- | xargs git log --color --graph' | cut -c 3-); git checkout $(echo $branch | sed 's#remotes/[^/]*/##'); else git checkout $args; fi }; f"
@@ -8,8 +21,6 @@
 	stl = !git stash list | fzf --preview 'echo {} | cut -d: -f1 | xargs git stash show -p --color=always' --height 90% | cut -d: -f1
 	sta = !git stl | xargs git stash apply
 	std = !git stl | xargs git stash drop
-	prune = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
-	prune-force = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
 	sd = !git diff | git-split-diffs --color | less -RFX
 	pr = "!f() { git fetch origin pull/\"$1\"/head:pr-\"$1\" && git switch pr-\"$1\"; }; f"
 	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
@@ -32,4 +43,19 @@
 [help]
 	autocorrect = 1
 [push]
-	default = current
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
