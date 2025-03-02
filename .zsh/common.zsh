@@ -57,6 +57,7 @@ alias zshrc='vim ~/.zshrc'
 alias zshrcc='vim ~/.zsh/common.zsh'
 alias vimrc='vim ~/.config/nvim'
 alias tmuxconf='vim ~/.tmux.conf'
+alias alaconf='vim ~/.config/alacritty/alacritty.toml';
 alias pa='pyenv activate'
 
 alias l='ls -lhF'
