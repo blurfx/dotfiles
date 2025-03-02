@@ -124,6 +124,16 @@ key = "O"
 mods = "Command"
 
 [[keyboard.bindings]]
+chars = "\u001BF"
+key = "F"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BP"
+key = "P"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
 chars = "\u0002\u000F"
 key = "O"
 mods = "Command|Shift"
