@@ -163,6 +163,11 @@ chars = "\u0002w"
 key = "E"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\u001Bk"
+key = "K"
+mods = "Command"
+
 [mouse]
 hide_when_typing = true
 
