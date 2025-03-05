@@ -56,6 +56,8 @@
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
+[merge]
+	conflictstyle = zdiff3
 [rerere]
 	enabled = true
 	autoupdate = true
