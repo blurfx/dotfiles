@@ -141,11 +141,11 @@ else
 fi
 
 has "zoxide" && eval "$(zoxide init zsh)"
+export JQ_COLORS="0;33:0;37:0;37:0;37:0;32:1;37:1;37"
 
 # initialize things
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
