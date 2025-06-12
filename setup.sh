@@ -17,18 +17,48 @@ symlink_prompt() {
     local target=$2
     local description=$3
 
-    read -p "Do you want to create a symlink for $description? (Y/n): " answer
-    if [[ $answer == "Y" || $answer == "y" || $answer == "" ]]; then
+    if prompt "Do you want to create a symlink for $description?"; then
         mkdir -p "$(dirname "$target")"
         create_symlink "$source" "$target"
     fi
     last_answer=$answer
 }
 
+prompt() {
+    read -p "$1 (Y/n): " answer
+    if [[ $answer == "Y" || $answer == "y" || $answer == "" ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+# chec brew is installed, if not ask to install it
+if ! command -v brew &> /dev/null; then
+    if prompt "Homebrew is not installed. Do you want to install it?"; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+fi
+
+# if homebrew is installed, ask to install packages with Brewfile
+if command -v brew &> /dev/null; then
+    if prompt "Do you want to install packages with Brewfile?"; then
+        brew bundle --file="$SCRIPT_DIR/Brewfile"
+    fi
+fi
+
+# ask install packages with Brewfile
+
 ensure_zshrc_source() {
     local source_line='source "$HOME/.zsh/common.zsh"'
     local zshrc_file="$HOME/.zshrc"
 
+    # if .zshrc doesn't exist, create it
+    if [[ ! -f "$zshrc_file" ]]; then
+        echo "Creating $zshrc_file"
+        touch "$zshrc_file"
+    fi
+    
     if ! grep -Fxq "$source_line" "$zshrc_file"; then
         (echo "$source_line"; cat "$zshrc_file") > "$zshrc_file.tmp" && mv "$zshrc_file.tmp" "$zshrc_file"
         echo "Added '$source_line' to the top of $zshrc_file"
