@@ -168,6 +168,11 @@ chars = "\u001Bk"
 key = "K"
 mods = "Command"
 
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "None"
+
 [mouse]
 hide_when_typing = true
 
