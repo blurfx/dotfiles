@@ -83,6 +83,7 @@ vim.o.directory = '/tmp//,'
 -- Vim key mappings
 vim.g.mapleader = '\\'
 
+vim.keymap.set('n', 'q', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Space>', '<PageDown>', {})
 vim.keymap.set('n', '<M-Space>', '<PageUp>', {})
 
