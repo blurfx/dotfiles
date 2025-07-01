@@ -27,7 +27,7 @@
 	stale = "!f() { git for-each-ref --format='%(committerdate:short) %(refname:short)' refs/heads | awk -v date=$(date -v-\"$1\"d +%Y-%m-%d) '$1 <= date && $2 !~ /(main|master|prod|develop)/ { print $2 }' | xargs -r git branch -D; }; f"
 	open = "!f() { echo \"$(git remote get-url origin | sed -E 's/git@(.+)\\:(.+)\\.git/https:\\/\\/\\1\\/\\2/')\" | xargs open; }; f"
 	newpr = "!f() { echo \"$(git remote get-url origin | sed -E 's/git@(.+)\\:(.+)\\.git/https:\\/\\/\\1\\/\\2/')/pull/new/$(git branch --show-current)\" | xargs open; }; f"
-
+	rmtag = "!sh -c 'git tag -d $1 && git push origin --delete $1' -"
 
 [pager]
 	diff = delta
