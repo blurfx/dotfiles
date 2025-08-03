@@ -64,12 +64,12 @@ key = "Key6"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00026"
+chars = "\u00027"
 key = "Key7"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00027"
+chars = "\u00028"
 key = "Key8"
 mods = "Command"
 
