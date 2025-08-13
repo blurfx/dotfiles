@@ -19,13 +19,13 @@ setopt SHARE_HISTORY
 function git_main_branch() {
   command git rev-parse --git-dir &>/dev/null || return
   local ref
-  for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk}; do
+  for ref in refs/{heads,remotes/{origin,upstream}}/{main,,master,trunk}; do
     if command git show-ref -q --verify $ref; then
       echo ${ref:t}
       return
     fi
   done
-  echo master
+  echo main
 }
 
 function git_develop_branch() {
@@ -126,11 +126,9 @@ insert_npm_script() {
 # bindkey '^J' insert_npm_script
 
 ## etc aliases
-alias saml="AWS_PROFILE=saml"
 alias tf="terraform"
 has "eza" && alias ls='eza'
 has "bat" && alias cat='bat'
-has "zoxide" && alias cd='z'
 has "kubectl" && alias k="kubectl"
 has "terraform" && alias tf="terraform"
 
@@ -142,6 +140,7 @@ else
 fi
 
 has "zoxide" && eval "$(zoxide init zsh)"
+# has "zoxide" && alias cd='z'
 export JQ_COLORS="0;33:0;37:0;37:0;37:0;32:1;37:1;37"
 
 # initialize things
@@ -150,3 +149,53 @@ antidote load
 antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+expand_dots() {
+  local input="$LBUFFER"
+  while [[ $LBUFFER =~ '([^[:space:].]*)(\.{3,})([^[:space:].]*)' ]]; do
+    local full_match="${MATCH}"
+    local before_dots="${match[1]}"
+    local dots_part="${match[2]}"
+    local after_dots="${match[3]}"
+    local count=${#dots_part}
+
+    if [[ $count -ge 3 ]]; then
+      local replacement=""
+      for (( i=0; i<count-2; i++ )); do
+        replacement+="../"
+      done
+      replacement+=".."
+
+      local result="$before_dots"
+      if [[ -n "$before_dots" && "$before_dots" != */ ]]; then
+        result="$result/"
+      fi
+      result="$result$replacement"
+      if [[ -n "$after_dots" ]]; then
+        if [[ "$after_dots" != /* ]]; then
+          result="$result/$after_dots"
+        else
+          result="$result$after_dots"
+        fi
+      fi
+
+      LBUFFER="${LBUFFER/$full_match/$result}"
+    else
+      break
+    fi
+  done
+
+  [[ "$input" != "$LBUFFER" ]]
+}
+
+expand_dots_on_tab() {
+  if expand_dots; then
+    zle redisplay
+  else
+    zle expand-or-complete
+  fi
+}
+
+zle -N expand_dots_on_tab
+bindkey '^I' expand_dots_on_tab
+
