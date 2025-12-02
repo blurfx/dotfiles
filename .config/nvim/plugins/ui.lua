@@ -4,7 +4,7 @@ return {
     'folke/neoconf.nvim',
     cmd = 'Neoconf'
   },
-  'folke/neodev.nvim',
+  'folke/lazydev.nvim',
   {
     'nvim-lualine/lualine.nvim',
     opts = {
@@ -66,8 +66,8 @@ return {
           end
 
           -- Navigation
-          map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
-          map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
+          map('n', ']h', "&diff ? ']h' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
+          map('n', '[h', "&diff ? '[h' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
 
           -- Actions
           map('n', '<leader>hs', ':Gitsigns stage_hunk<CR>')
