@@ -1,3 +1,3 @@
 # dotfiles
 
-Run `./setup/sh` 
+Run `./setup.sh`
