@@ -87,7 +87,7 @@ if has "git"; then
   alias gcl='git clone --recursive'
   alias gcm='git switch $(git_main_branch)'
   alias gcmsg='git commit -S -m'
-  alias gcnmsg='git commit --allow-empty-message'
+  alias gcnmsg='git commit --allow-empty-message -m ""'
   alias gco='git checkout'
   alias gd='git diff'
   alias gds='git diff --staged'

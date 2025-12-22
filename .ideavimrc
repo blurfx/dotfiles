@@ -1,2 +1,4 @@
+sethandler <C-W> a:vim
+
 set number
 set relativenumber
