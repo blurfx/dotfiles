@@ -60,6 +60,7 @@ alias tmuxconf='vim ~/.tmux.conf'
 alias alaconf='vim ~/.config/alacritty/alacritty.toml';
 alias pa='pyenv activate'
 alias av='source .venv/bin/activate'
+alias copy='pbcopy <'
 
 alias l='ls -lhF'
 alias ll='ls -l'
