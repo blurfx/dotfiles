@@ -111,6 +111,9 @@ if has "git"; then
   alias gswd='git switch -d'
 fi
 
+has 'pycharm' && alias pc='pycharm'
+has 'webstorm' && alias ws='webstorm'
+
 # npm scripts
 insert_npm_script() {
   if [[ ! -f package.json ]]; then

@@ -75,8 +75,6 @@ fi
 
 symlink_prompt "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/" "alacritty config"
 
-symlink_prompt "$SCRIPT_DIR/.wezterm.lua" "$HOME/.wezterm.lua" "wezterm config"
-
 symlink_prompt "$SCRIPT_DIR/.config/nvim" "$HOME/.config" "nvim config"
 
 symlink_prompt "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf" "tmux config"
@@ -86,3 +84,4 @@ if [[ $last_answer == "Y" ]]; then
     create_symlink "$SCRIPT_DIR/.tmux/status-left.sh" "$HOME/.tmux/status-left.sh"
 fi
 
+symlink_prompt "$SCRIPT_DIR/.config/zed/keymap.json" "$HOME/.config/zed/keymap.json" "zed keymap"

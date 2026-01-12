@@ -1,0 +1,23 @@
+[
+  {
+    "bindings": {
+      "cmd-\\": "terminal_panel::ToggleFocus",
+      "cmd-alt-\\": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {}
+  },
+  {
+    "context": "(Workspace && !Terminal)",
+    "bindings": {
+      "cmd-n": "workspace::NewFile"
+    }
+  }
+]
+
