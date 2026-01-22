@@ -18,6 +18,11 @@
     "bindings": {
       "cmd-n": "workspace::NewFile"
     }
+  },
+  {
+    "bindings": {
+      "cmd-shift-z": "workspace::ToggleZoom"
+    }
   }
 ]
 
