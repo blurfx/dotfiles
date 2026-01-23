@@ -16,17 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  -- UI
-  require('plugins.ui'),
-
-  -- Autocompletion
-  require('plugins.autocompletion'),
-  
-  -- Language Support
-  require('plugins.languages'),
-
-  -- Productivity
-  require('plugins.productivity'),
+  require('plugin'),
 })
 
 -- Vim Built-in settings
