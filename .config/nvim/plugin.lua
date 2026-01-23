@@ -11,6 +11,9 @@ return {
 			require('nvim-tree').setup({
 				renderer = {
 					highlight_git = true,
+					indent_markers = {
+						enable = true,
+					},
 					icons = {
 						show = {
 							file = false,
@@ -26,6 +29,10 @@ return {
 							},
 						},
 					},
+				},
+				filters = {
+					dotfiles = false,
+					git_ignored = false,
 				},
 			})
 			vim.keymap.set('', '<C-o>', '<Esc>:NvimTreeToggle<CR>', { noremap = true, silent = true })
