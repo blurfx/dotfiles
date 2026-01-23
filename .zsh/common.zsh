@@ -3,6 +3,8 @@ autoload -Uz compinit && compinit
 # path
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin/brew:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH=$HOME/.local/bin/env:$PATH
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.config/jetbrains:$PATH
