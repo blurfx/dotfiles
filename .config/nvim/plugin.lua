@@ -129,6 +129,8 @@ return {
 			options = {
 				icons_enabled = false,
 				theme = 'onedark',
+				component_separators = { left = '>', right = '<'},
+				section_separators = { left = '', right = ''},
 			},
 		},
 	},
@@ -136,7 +138,10 @@ return {
 		'romgrk/barbar.nvim',
 		init = function() vim.g.barbar_auto_setup = false end,
 		opts = {
-			icons = { filetype = { enabled = false } },
+			icons = {
+				button = '✕',
+				filetype = { enabled = false }
+			},
 		}
 	},
 	{
