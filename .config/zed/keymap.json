@@ -21,8 +21,8 @@
   },
   {
     "bindings": {
-      "cmd-shift-z": "workspace::ToggleZoom"
+      "cmd-shift-z": "workspace::ToggleZoom",
+			"cmd-r": "search::ToggleReplace"
     }
   }
 ]
-
