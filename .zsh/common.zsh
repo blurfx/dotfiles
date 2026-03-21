@@ -98,7 +98,7 @@ if has "git"; then
   alias gf='git fetch'
   alias gl='git pull'
   alias glr='git pull --rebase'
-  alias glog='git log --oneline --decorate --graph'
+  alias glog="git log --graph -15 --abbrev=7 --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) -%C(bold yellow)%d%C(reset)%C(white)%w(110,1,2)%s%C(reset) %C(reset)%C(bold green)(%ar)%C(reset) %C(bold blue)<%an>%Creset' --all"
   alias gloga='git log --oneline --decorate --graph --all'
   alias gm='git merge'
   alias gp='git push'
