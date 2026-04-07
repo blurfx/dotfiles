@@ -86,6 +86,7 @@ if has "git"; then
   alias gb='git branch'
   alias gbd='git branch -d'
   alias gbD='git branch -D'
+  alias gbl='git blame'
   alias gcane='git commit --amend --no-edit'
   alias gcd='git switch $(git_develop_branch)'
   alias gcl='git clone --recursive'
@@ -98,7 +99,7 @@ if has "git"; then
   alias gf='git fetch'
   alias gl='git pull'
   alias glr='git pull --rebase'
-  alias glog="git log --graph -15 --abbrev=7 --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) -%C(bold yellow)%d%C(reset)%C(white)%w(110,1,2)%s%C(reset) %C(reset)%C(bold green)(%ar)%C(reset) %C(bold blue)<%an>%Creset' --all"
+  alias glog="git log --graph --decorate --pretty=format:'%C(auto)%h%Creset %s %C(auto)%d%Creset %C(blue)<%an>%Creset %C(green)(%cr)%Creset'"
   alias gloga='git log --oneline --decorate --graph --all'
   alias gm='git merge'
   alias gp='git push'

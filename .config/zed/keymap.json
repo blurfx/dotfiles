@@ -2,27 +2,31 @@
   {
     "bindings": {
       "cmd-\\": "terminal_panel::ToggleFocus",
-      "cmd-alt-\\": "terminal_panel::Toggle"
-    }
+      "cmd-alt-\\": "terminal_panel::Toggle",
+      "cmd-shift-z": "workspace::ToggleZoom",
+      "cmd-r": "search::ToggleReplace",
+    },
   },
   {
     "context": "Workspace",
-    "bindings": {}
+    "bindings": {
+      "cmd-r": "search::ToggleReplace",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-r": "search::ToggleReplace",
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
-    "bindings": {}
+    "bindings": {},
   },
   {
     "context": "(Workspace && !Terminal)",
     "bindings": {
-      "cmd-n": "workspace::NewFile"
-    }
+      "cmd-n": "workspace::NewFile",
+    },
   },
-  {
-    "bindings": {
-      "cmd-shift-z": "workspace::ToggleZoom",
-			"cmd-r": "search::ToggleReplace"
-    }
-  }
 ]
