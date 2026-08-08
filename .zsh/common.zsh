@@ -61,6 +61,7 @@ alias zshrcc='vim ~/.zsh/common.zsh'
 alias vimrc='vim ~/.config/nvim'
 alias tmuxconf='vim ~/.tmux.conf'
 alias alaconf='vim ~/.config/alacritty/alacritty.toml';
+alias sshconf='vim ~/.ssh/config'
 alias pa='pyenv activate'
 alias av='source .venv/bin/activate'
 alias copy='pbcopy <'
