@@ -67,6 +67,10 @@ alias pa='pyenv activate'
 alias av='source .venv/bin/activate'
 alias copy='pbcopy <'
 
+function killport() {
+  lsof -i:"$1" | awk 'NR>1{print$2}' | xargs kill -9  
+}
+
 alias l='ls -lhF'
 alias ll='ls -l'
 if has "eza"; then
