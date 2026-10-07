@@ -62,6 +62,7 @@ alias vimrc='vim ~/.config/nvim'
 alias tmuxconf='vim ~/.tmux.conf'
 alias alaconf='vim ~/.config/alacritty/alacritty.toml';
 alias sshconf='vim ~/.ssh/config'
+alias awsconf='vim ~/.aws/config'
 alias pa='pyenv activate'
 alias av='source .venv/bin/activate'
 alias copy='pbcopy <'
@@ -208,4 +209,6 @@ expand_dots_on_tab() {
 }
 
 zle -N expand_dots_on_tab
+# insert below line after fzf --zsh init
+# bindkey '^I' expand_dots_on_tab
 
